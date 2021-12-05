@@ -179,6 +179,7 @@
     }
   }
 }
+
 .products-list__item_green {
   background-color: #c2e297;
   &::before {
@@ -200,6 +201,45 @@
       @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
         background-image: url('../images/products-img-3-desktop2x.png');
       }
+    }
+  }
+}
+
+.products-list__title {
+  margin-bottom: 30px;
+
+  font-family: 'Titan One', cursive;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  color: var(--primary-text-color);
+
+  @media (min-width: 1080px) {
+    margin-bottom: 32px;
+
+    font-size: 30px;
+    line-height: 1.13;
+  }
+
+  &::after {
+    content: '';
+
+    display: block;
+    margin: 30px auto 0;
+    width: 26px;
+    height: 6px;
+
+    background-image: url('../images/products-dots-icon.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @media (min-width: 1080px) {
+      margin-top: 32px;
     }
   }
 }
