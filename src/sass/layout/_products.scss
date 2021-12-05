@@ -105,14 +105,19 @@
 }
 .products-list__item::before {
   content: '';
+  position: absolute;
   top: 0;
   left: 0;
 
-  position: absolute;
   display: block;
   width: 100%;
   // max-width: 335px;
   height: 252px;
+
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+
   transform: translateY(-113px);
 
   @media (min-width: 768px) {
@@ -127,13 +132,10 @@
 }
 
 .products-list__item_pink {
-  background-color: #ffb8ca;
+  background-color: var(--background-color);
   &::before {
     content: '';
     background-image: url('../images/products-img-1-mobile.png');
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
 
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
       background-image: url('../images/products-img-1-mobile2x.png');
@@ -158,9 +160,6 @@
   &::before {
     content: '';
     background-image: url('../images/products-img-2-mobile.png');
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
 
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
       background-image: url('../images/products-img-2-mobile2x.png');
@@ -182,4 +181,25 @@
 }
 .products-list__item_green {
   background-color: #c2e297;
+  &::before {
+    content: '';
+    background-image: url('../images/products-img-3-mobile.png');
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url('../images/products-img-3-mobile2x.png');
+    }
+
+    @media (min-width: 321px) {
+      background-image: url('../images/products-img-3-tablet.png');
+      @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+        background-image: url('../images/products-img-3-tablet2x.png');
+      }
+    }
+    @media (min-width: 769px) {
+      background-image: url('../images/products-img-3-desktop.png');
+      @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+        background-image: url('../images/products-img-3-desktop2x.png');
+      }
+    }
+  }
 }
