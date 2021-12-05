@@ -110,6 +110,7 @@
   position: absolute;
   display: block;
   width: 100%;
+  max-width: 335px;
   height: 252px;
   transform: translateY(-113px);
 
@@ -137,13 +138,13 @@
       background-image: url('../images/products-img-1-mobile2x.png');
     }
 
-    @media (min-width: 768px) {
+    @media (min-width: 321px) {
       background-image: url('../images/products-img-1-tablet.png');
       @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
         background-image: url('../images/products-img-1-tablet2x.png');
       }
     }
-    @media (min-width: 1080px) {
+    @media (min-width: 769px) {
       background-image: url('../images/products-img-1-desktop.png');
       @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
         background-image: url('../images/products-img-1-desktop2x.png');
