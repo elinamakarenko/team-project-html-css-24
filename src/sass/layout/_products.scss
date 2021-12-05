@@ -155,6 +155,30 @@
 }
 .products-list__item_beige {
   background-color: #f0d1a5;
+  &::before {
+    content: '';
+    background-image: url('../images/products-img-2-mobile.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url('../images/products-img-2-mobile2x.png');
+    }
+
+    @media (min-width: 321px) {
+      background-image: url('../images/products-img-2-tablet.png');
+      @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+        background-image: url('../images/products-img-2-tablet2x.png');
+      }
+    }
+    @media (min-width: 769px) {
+      background-image: url('../images/products-img-2-desktop.png');
+      @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+        background-image: url('../images/products-img-2-desktop2x.png');
+      }
+    }
+  }
 }
 .products-list__item_green {
   background-color: #c2e297;
