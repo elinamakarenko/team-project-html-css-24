@@ -243,3 +243,27 @@
     }
   }
 }
+
+.products-list__text {
+  margin-bottom: 30px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.52;
+  text-align: center;
+  letter-spacing: 0.04em;
+
+  color: var(--primary-text-color);
+
+  @media (min-width: 768px) {
+    margin-bottom: 40px;
+
+    line-height: 1.76;
+  }
+
+  @media (min-width: 1080px) {
+    margin-bottom: 62px;
+
+    font-size: 16px;
+  }
+}
