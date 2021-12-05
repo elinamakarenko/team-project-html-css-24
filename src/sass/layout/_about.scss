@@ -16,13 +16,13 @@
   }
 }
 
-.section-bg {
+.about-bg {
   background-image: url(/images/splashes_of_milk.png);
   background-repeat: no-repeat;
   background-position-y: 342px;
   background-color: var(--secondary-background-color);
-  margin-left: 0;
-  margin-right: 0;
+  margin-left: auto;
+  margin-right: auto;
   max-width: 1280px;
 }
 
@@ -76,7 +76,7 @@
 .content__img {
   position: absolute;
   top: -47px;
-  left: 15px;
+  left: 0px;
 }
 
 .content__excerpt {
@@ -121,18 +121,11 @@
 }
 
 .content__btn:hover {
-  border: 1px solid var(--primary-title-color);
-  .content__btn-text {
-    color: var(--fourth-text-color);
-  }
-}
-
-.content__btn:hover .content__btn-text::after {
-  fill: var(--fourth-text-color);
+  background: #ECEBEB;
 }
 
 .content__btn-text {
-    width: 100%;
+  width: 100%;
   align-self: center;
   justify-content: center;
   padding: auto;
