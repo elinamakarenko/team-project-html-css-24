@@ -1,24 +1,28 @@
 .about-bg {
-  background-image: url(/images/splashes_of_milk.png);
+  background-image: url('/images/milk-desktop.png');
   background-repeat: no-repeat;
   background-position-y: 342px;
+  background-size: 1280px auto;
   background-color: var(--secondary-background-color);
   margin-left: auto;
   margin-right: auto;
   max-width: 1280px;
-  @media screen and (min-width: 480px) {
-    max-width: 480px;
-    background-size: contain;
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: url('/images/milk-desktop@2x.png');
   }
-  @media screen and (min-width: 768px) {
-    max-width: 768px;
-    
+  @media screen and (min-width: 768px) and (max-width: 1079px) {
+    background-image: none;
   }
-  @media screen and (min-width: 1280px) {
-    max-width: 1280px;
-    padding-left: 15px;
-    padding-right: 15px;
-    background-size: contain;
+
+  @media screen and (max-width: 767px) {
+    background-image: url('/images/milk-mobile.png');
+    background-position-y: 766px;
+    background-size: 480px auto;
+    @media screen and (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url('/images/milk-mobile@2x.png');
+    }
   }
 }
 
@@ -27,6 +31,14 @@
   margin-right: auto;
   padding-top: 125px;
   margin-bottom: 102px;
+
+  @media screen and (min-width: 768px) and (max-width: 1079px) {
+    padding-top: 130px;
+    margin-bottom: 100px;
+  }
+  @media screen and (min-width: 479px) and (max-width: 767px) {
+    margin-bottom: 26px;
+  }
 }
 
 .title-box__subtitle {
@@ -43,6 +55,17 @@
   text-transform: uppercase;
 
   color: var(--fifth-text-color);
+
+  @media screen and (min-width: 768px) and (max-width: 1079px) {
+    margin-bottom: 16px;
+
+    font-size: 26px;
+    line-height: 30px;
+  }
+  @media screen and (max-width: 767px) {
+    font-size: 18px;
+    line-height: 21px;
+  }
 }
 
 .title-box__title {
@@ -56,11 +79,21 @@
   text-transform: uppercase;
 
   color: var(--primary-title-color);
+
+  @media screen and (min-width: 768px) and (max-width: 1079px) {
+    font-size: 48px;
+    line-height: 55px;
+    letter-spacing: 0.04em;
+  }
+  @media screen and (max-width: 767px) {
+    font-size: 34px;
+    line-height: 39px;
+    letter-spacing: 0.04em;
+  }
 }
 
 .content {
   margin-bottom: 146px;
-  padding-right: 117px;
   padding-top: 4px;
 
   position: relative;
@@ -71,8 +104,17 @@
 
 .content__img {
   position: absolute;
-  top: -47px;
-  left: 0px;
+  top: 295px;
+  left: 112px;
+
+  @media screen and (min-width: 768px) and (max-width: 1079px) {
+    left: 39px;
+    top: 300px;
+  }
+  @media screen and (max-width: 767px) {
+    position: static;
+    margin: 0 auto;
+  }
 }
 
 .content__excerpt {
@@ -99,6 +141,38 @@
     letter-spacing: 0.04em;
 
     color: var(--fourth-text-color);
+
+    @media screen and (min-width: 768px) and (max-width: 1079px) {
+      width: 340px;
+      margin-bottom: 35px;
+
+      font-size: 14px;
+    }
+    @media screen and (max-width: 767px) {
+      /* width: 340px; */
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 25px;
+      padding-right: 25px;
+
+      font-size: 12px;
+      line-height: 1.62;
+    }
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1079px) {
+    width: 340px;
+
+    line-height: 1.76;
+  }
+  @media screen and (max-width: 767px) {
+    /* width: 340px; */
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 12px;
+    line-height: 1.62;
   }
 }
 
@@ -106,7 +180,7 @@
   cursor: pointer;
   display: inline-flex;
 
-  margin-right: 287px;
+  margin-right: auto;
   width: 176px;
   height: 44px;
 
@@ -142,70 +216,4 @@
   width: 8px;
   height: 10px;
   background-image: url(/images/arrow.svg);
-}
-
-.about-list {
-  display: inline-flex;
-  position: relative;
-  margin-bottom: 139px;
-}
-
-.about-list__item {
-  &--left {
-    margin-right: 30px;
-  }
-  &--left::before {
-    content: '';
-    display: block;
-    margin-bottom: 40px;
-    width: 33px;
-    height: 50px;
-    background-image: url(/images/bucket_of_milk.png);
-    background-size: cover;
-  }
-  &--center {
-    margin-right: 30px;
-  }
-  &--center::before {
-    content: '';
-    display: block;
-    margin-bottom: 40px;
-    width: 50px;
-    height: 50px;
-    background-image: url(/images/bucket_of_apples.png);
-    background-size: cover;
-  }
-  &--right::before {
-    content: '';
-    display: block;
-    margin-bottom: 40px;
-    width: 44px;
-    height: 50px;
-    background-image: url(/images/Ice_cream_on_stick.png);
-    background-size: cover;
-  }
-}
-
-.about-list__amount {
-  display: block;
-  margin-bottom: 15px;
-
-  font-family: Titan One;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 58px;
-  line-height: 66px;
-  text-align: left;
-  letter-spacing: 0.04em;
-  color: var(--primary-title-color);
-}
-
-.about-list__text {
-  font-style: normal;
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 1.76;
-  letter-spacing: 0.02em;
-
-  color: var(--fourth-text-color);
 }
