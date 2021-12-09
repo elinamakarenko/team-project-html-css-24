@@ -1,12 +1,21 @@
 :root {
-    --primary-text-color: #FFFFFF;
-    --secondary-text-color: #D41443;
-    --third-text-color: #907E82;
-    --fourth-text-color: #000000;
-    --fifth-text-color: #FFA5BA;
-    --primary-title-color: #D41443;
-    --secondary-title-color: #FFA5BA;
-    --accent-color: #D41342;
-    --background-color: #FFB8CA;
-    --secondary-background-color: #FFF5F6;
-  }
+  --main-font: 'DM Sans', sans-serif;
+  --title-font: 'Titan One', cursive;
+
+  --accent-color: #d41443;
+  --title-color: #d21443;
+  --subtitle-color: #ffa5ba;
+  --text-color: #907e82;
+  --dark-text-color: #000000;
+  --white-text-color: #ffffff;
+
+  --bg-light-pink: #fff5f6;
+  --bg-pink: #ffb8ca;
+  --bg-light-green: #c2e297;
+  --bg-beige: #f0d1a5;
+  --bg-reviews: #fafafa;
+  --bg-mobmenu:#E17992;
+  --menu-border:#E18298;
+
+  --cubic:cubic-bezier(0.4, 0, 0.2, 1);
+}

@@ -1,29 +1,45 @@
 (() => {
-  const mobileMenu = document.querySelector('.js-menu-container');
-  const openMenuBtn = document.querySelector('.js-open-menu');
-  const closeMenuBtn = document.querySelector('.js-close-menu');
+  const menuBtnRef = document.querySelector("[data-menu-button]");
+  const mobileMenuRef = document.querySelector("[data-menu]");
+  const mobileBtnClose = document.querySelector("[data-menu-close]");
+  const mobileBackdrop = document.querySelector("[data-menu-backdrop]");
+  const dasktopNavigation = document.querySelector("[data-menu-daskt-nav]");
+  const mobileMenuHome = document.querySelector("[data-menu-home]");
 
-  const toggleMenu = () => {
-    const isMenuOpen =
-      openMenuBtn.getAttribute('aria-expanded') === 'true' || false;
-    openMenuBtn.setAttribute('aria-expanded', !isMenuOpen);
-    mobileMenu.classList.toggle('is-open');
+  mobileMenuHome.addEventListener("click", () => {
+    mobileMenuRef.classList.toggle("is-open");
+  })
 
-    const scrollLockMethod = !isMenuOpen
-      ? 'disableBodyScroll'
-      : 'enableBodyScroll';
-    bodyScrollLock[scrollLockMethod](document.body);
-  };
+   mobileMenuHome.addEventListener("click", () => {
+     mobileBackdrop.classList.toggle("is-open-backdrop");
+   })
+  
+   mobileMenuHome.addEventListener("click", () => {
+     dasktopNavigation.classList.toggle("is-open-nav");
+  })
 
-  openMenuBtn.addEventListener('click', toggleMenu);
-  closeMenuBtn.addEventListener('click', toggleMenu);
+  menuBtnRef.addEventListener("click", () => {
+    mobileMenuRef.classList.toggle("is-open");
+  })
 
-  // Закрываем мобильное меню на более широких экранах
-  // в случае изменения ориентации устройства.
-  window.matchMedia('(min-width: 768px)').addEventListener('change', e => {
-    if (!e.matches) return;
-    mobileMenu.classList.remove('is-open');
-    openMenuBtn.setAttribute('aria-expanded', false);
-    bodyScrollLock.enableBodyScroll(document.body);
+  mobileBtnClose.addEventListener('click', () => {
+    mobileMenuRef.classList.toggle("is-open");
   });
-})();
+
+
+  menuBtnRef.addEventListener("click", () => {
+    mobileBackdrop.classList.toggle("is-open-backdrop");
+  })
+
+  mobileBtnClose.addEventListener('click', () => {
+    mobileBackdrop.classList.toggle("is-open-backdrop");
+  });
+
+  menuBtnRef.addEventListener("click", () => {
+    dasktopNavigation.classList.toggle("is-open-nav");
+  })
+
+  mobileBtnClose.addEventListener('click', () => {
+    dasktopNavigation.classList.toggle("is-open-nav");
+  });
+})()
