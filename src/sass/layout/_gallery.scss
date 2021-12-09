@@ -1,13 +1,13 @@
 .gallery {
   width: 100%;
   padding-top: 0px;
-  margin: 0 auto;
+  // margin: 0 auto;
   background: #fff5f6;
   background: linear-gradient(180deg, #fff5f6 50%, #ffffff 50%);
   background: -webkit-linear-gradient(180deg, #fff5f6 50%, #ffffff 50%);
   background: -moz-linear-gradient(180deg, #fff5f6 50%, #ffffff 50%);
 }
-.gallery__images {
+.gallery__container .images {
   background-image: url(../images/gallery-img-mob-1x.jpg);
   background-repeat: no-repeat;
   background-position: center;
@@ -15,6 +15,7 @@
   margin: -48px 0px 0px 0px;
   position: relative;
   z-index: 2;
+
   @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
     background-image: url(../images/gallery-img-mob-2x.jpg);
     background-repeat: no-repeat;
