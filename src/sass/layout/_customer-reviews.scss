@@ -58,7 +58,6 @@
 
 .slick-dots {
   list-style: none;
-  @include flex-center;
   width: 72px;
   justify-content: space-between;
   margin: 0 auto;
